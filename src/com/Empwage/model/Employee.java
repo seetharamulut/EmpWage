@@ -4,20 +4,30 @@ public class Employee{
 
         private boolean status;
 	private int dailywage;
+	private int salary;
 
         public boolean getStatus(){
                 return status;
         }
+
         public void setStatus(boolean status){
                 this.status=status;
         }
+
 	public int getDailywage(){
-//System.out.println("js"+ dailywage);
                 return dailywage;
         }
+
         public void setDailywage(int wage){
                 this.dailywage=wage;
-//System.out.println(dailywage);
+        }
+
+	public int getSalary(){
+                return salary;
+        }
+
+        public void setSalary(int salary){
+                this.salary=salary;
         }
 
 }

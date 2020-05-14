@@ -9,8 +9,8 @@ public class EmpMain{
 		Empservice empservice = new Empservice();
 		Employee emp = new Employee();
 
-		boolean status = empservice.EmpStatus(emp);
-		empservice.EmpDailywage(emp);
-
+		//empservice.EmpStatus(emp);
+		//empservice.EmpDailywage(emp);
+		empservice.EmpSalary(emp);
         }
 }
