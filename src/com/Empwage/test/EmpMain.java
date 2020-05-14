@@ -9,11 +9,10 @@ public class EmpMain{
 
         public static void main(String[] args) {
 
-		Iempservice Iempservice = new Mnocompany();
+		Iempservice Iempservice = new Abcompany();
 		Employee emp = new Employee();
 
-		//Iempservice.EmpStatus(emp);
-		//Iempservice.EmpDailywage(emp);
-		Iempservice.EmpSalary(emp);
+		Iempservice.EmpSalary(emp, "Reliance", 18, 14, 120);
+		Iempservice.EmpSalary(emp, "Dmart", 20, 21, 100);
         }
 }

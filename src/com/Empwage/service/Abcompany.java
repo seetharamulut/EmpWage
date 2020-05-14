@@ -9,9 +9,6 @@ public class Abcompany implements Iempservice{
         private int hours=0;
         private int total_hours=0;
         private int salary =0;
-        private final int hour_wage=20;
-        private final int monthly_days=20;
-        private final int monthly_hours=100;
 
         public void EmpStatus(Employee emp){
 
@@ -26,7 +23,7 @@ public class Abcompany implements Iempservice{
                 };
         }
 
-        public void EmpDailywage(Employee emp){
+        public void EmpDailywage(Employee emp, int hour_wage){
 
                 status=emp.getStatus();
 
@@ -39,14 +36,15 @@ public class Abcompany implements Iempservice{
 
         }
 
-        public void EmpSalary(Employee emp){
+        public void EmpSalary(Employee emp,String name, int hour_wage, int monthly_days, int monthly_hours){
+
 
                 for(int i=0; i < monthly_days && total_hours < monthly_hours; i++){
                         EmpStatus(emp);
                         status = emp.getStatus();
 
                         if(status == true){
-                                EmpDailywage(emp);
+                                EmpDailywage(emp, hour_wage);
                                 salary += emp.getDailywage();
                         }
                 }
@@ -55,6 +53,7 @@ public class Abcompany implements Iempservice{
                 else
                         emp.setSalary(monthly_hours * hour_wage);
 
-                System.out.println("total salary of Abcompany employee is : "+ emp.getSalary());
+		System.out.print(name);
+                System.out.println("  employee salaryis : "+ emp.getSalary());
         }
 }
