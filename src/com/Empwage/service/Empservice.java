@@ -22,11 +22,19 @@ public class Empservice{
 	public void EmpDailywage(Employee emp){
 
 		int wage=0;
+		int hours=0;
+		final int hour_wage = 20;
 		boolean status=emp.getStatus();
+
 		if(status == true){
-			wage=20*(int)(((Math.random()*10)%8)+1);
+			hours=(int)(((Math.random()*10)%8)+1);
+			wage = hour_wage * hours;
 			emp.setDailywage(wage);
-			System.out.println("dailywage is : "+ wage);
+
+			if(hours == 8)
+				System.out.println("full time wage is : "+ wage);
+			else
+				System.out.println("part time wage is : "+ wage);
 		}
 
 	}
