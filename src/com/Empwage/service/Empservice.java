@@ -3,9 +3,8 @@ import com.Empwage.model.Employee;
 
 public class Empservice{
 
-	Employee emp = new Employee();
 
-	public boolean EmpStatus(){
+	public boolean EmpStatus(Employee emp){
 
                 int status = (int)(Math.random()*10)%2;
                 if(status == 1){
@@ -17,4 +16,13 @@ public class Empservice{
                 return false;
                 }
         }
+
+	public void EmpDailywage(Employee emp){
+
+		boolean status=emp.getStatus();
+		if(status == true){
+		emp.setDailywage(20*(int)(((Math.random()*10)%8)+1));
+		}
+
+	}
 }
