@@ -10,15 +10,7 @@ public class EmpMain{
 		Employee emp = new Employee();
 
 		boolean status = empservice.EmpStatus(emp);
-
-                if(status == true)
-                        System.out.println("present");
-                else
-                        System.out.println("absent");
-
-
 		empservice.EmpDailywage(emp);
-		System.out.println("employee daily wage is : "+ emp.getDailywage());
 
         }
 }

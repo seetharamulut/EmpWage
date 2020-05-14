@@ -8,20 +8,25 @@ public class Empservice{
 
                 int status = (int)(Math.random()*10)%2;
                 if(status == 1){
-                emp.setStatus(true);
-                return true;
+			System.out.println("present");
+                	emp.setStatus(true);
+                	return true;
                 }
                 else{
-                emp.setStatus(false);
-                return false;
+			System.out.println("absent");
+                	emp.setStatus(false);
+                	return false;
                 }
         }
 
 	public void EmpDailywage(Employee emp){
 
+		int wage=0;
 		boolean status=emp.getStatus();
 		if(status == true){
-		emp.setDailywage(20*(int)(((Math.random()*10)%8)+1));
+			wage=20*(int)(((Math.random()*10)%8)+1);
+			emp.setDailywage(wage);
+			System.out.println("dailywage is : "+ wage);
 		}
 
 	}
