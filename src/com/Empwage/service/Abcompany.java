@@ -15,10 +15,10 @@ public class Abcompany implements Iempservice{
                 int status = (int)(Math.random()*10)%2;
                 switch (status){
 
-                        case 0: //System.out.println("absent");
+                        case 0:
                                 emp.setStatus(false);
 
-                        case 1: //System.out.println("present");
+                        case 1:
                                 emp.setStatus(true);
                 };
         }
