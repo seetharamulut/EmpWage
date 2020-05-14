@@ -7,12 +7,10 @@ public class EmpMain{
         public static void main(String[] args) {
 
 		Empservice empservice = new Empservice();
+		Employee emp = new Employee();
 
-		boolean status = empservice.EmpStatus();
+		boolean status = empservice.EmpStatus(emp);
+		empservice.EmpDailywage(emp);
 
-                if(status == true)
-                        System.out.println("present");
-                else
-                        System.out.println("absent");
         }
 }
