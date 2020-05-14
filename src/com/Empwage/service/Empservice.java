@@ -6,9 +6,11 @@ public class Empservice{
 	private boolean status;
 	private int wage=0;
         private int hours=0;
+	private int total_hours=0;
 	private int salary =0;
         private final int hour_wage=20;
 	private final int monthly_days=20;
+	private final int monthly_hours=100;
 
 	public void EmpStatus(Employee emp){
 
@@ -31,7 +33,7 @@ public class Empservice{
 			hours=(int)(((Math.random()*10)%8)+1);
 			wage = hour_wage * hours;
 			emp.setDailywage(wage);
-
+			total_hours+=hours;
 			/*if(hours == 8)
 				System.out.println("full time wage is : "+ wage);
 			else
@@ -42,7 +44,7 @@ public class Empservice{
 
 	public void EmpSalary(Employee emp){
 
-		for(int i=0; i < monthly_days; i++){
+		for(int i=0; i < monthly_days && total_hours < monthly_hours; i++){
  			EmpStatus(emp);
 			status = emp.getStatus();
 
@@ -51,7 +53,11 @@ public class Empservice{
 	                        salary += emp.getDailywage();
 			}
 		}
-		emp.setSalary(salary);
-		System.out.println("total salary of employee is : "+ salary);
+		if(total_hours < 100)
+			emp.setSalary(salary);
+		else
+			emp.setSalary(monthly_hours * hour_wage);
+
+		System.out.println("total salary of employee is : "+ emp.getSalary());
 	}
 }
