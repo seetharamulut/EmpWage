@@ -7,17 +7,18 @@ public class Empservice{
 	public boolean EmpStatus(Employee emp){
 
                 int status = (int)(Math.random()*10)%2;
-                if(status == 1){
-			System.out.println("present");
-                	emp.setStatus(true);
-                	return true;
-                }
-                else{
-			System.out.println("absent");
-                	emp.setStatus(false);
-                	return false;
-                }
-        }
+                switch (status){
+
+			case 0: System.out.println("absent");
+	                        emp.setStatus(false);
+        	                return false;
+
+			case 1: System.out.println("present");
+                		emp.setStatus(true);
+                		return true;
+        	};
+		return false;
+	}
 
 	public void EmpDailywage(Employee emp){
 
