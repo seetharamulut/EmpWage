@@ -1,16 +1,17 @@
 package com.Empwage.test;
 import com.Empwage.model.Employee;
-import com.Empwage.service.Empservice;
+import com.Empwage.service.Iempservice;
+import com.Empwage.service.Abcompany;
 
 public class EmpMain{
 
         public static void main(String[] args) {
 
-		Empservice empservice = new Empservice();
+		Iempservice Iempservice = new Abcompany();
 		Employee emp = new Employee();
 
-		//empservice.EmpStatus(emp);
-		//empservice.EmpDailywage(emp);
-		empservice.EmpSalary(emp);
+		//Iempservice.EmpStatus(emp);
+		//Iempservice.EmpDailywage(emp);
+		Iempservice.EmpSalary(emp);
         }
 }
