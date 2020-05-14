@@ -2,26 +2,26 @@ package com.Empwage.service;
 import com.Empwage.model.Employee;
 import com.Empwage.service.Iempservice;
 
-public class Abcompany implements Iempservice{
+public class Xyzcompany implements Iempservice{
 
         private boolean status;
         private int wage=0;
         private int hours=0;
         private int total_hours=0;
         private int salary =0;
-        private final int hour_wage=20;
-        private final int monthly_days=20;
-        private final int monthly_hours=100;
+        private final int hour_wage=15;
+        private final int monthly_days=24;
+        private final int monthly_hours=150;
 
         public void EmpStatus(Employee emp){
 
                 int status = (int)(Math.random()*10)%2;
                 switch (status){
 
-                        case 0: //System.out.println("absent");
+                        case 0: 
                                 emp.setStatus(false);
 
-                        case 1: //System.out.println("present");
+                        case 1: 
                                 emp.setStatus(true);
                 };
         }
@@ -55,6 +55,6 @@ public class Abcompany implements Iempservice{
                 else
                         emp.setSalary(monthly_hours * hour_wage);
 
-                System.out.println("total salary of Abcompany employee is : "+ emp.getSalary());
+                System.out.println("total salary of Xyzcompany employee is : "+ emp.getSalary());
         }
 }
