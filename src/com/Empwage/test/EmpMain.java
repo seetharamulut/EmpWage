@@ -13,5 +13,7 @@ public class EmpMain{
 		empwagebuilderarray.addempwage("Reliance", 18, 24, 120);
 		empwagebuilderarray.addempwage("Tata", 22, 25, 125);
 		empwagebuilderarray.Empwage_computation();
-        }
+
+		System.out.println("Dmart employee wage is :"+ empwagebuilderarray.getTotalwage("Dmart"));
+	}
 }
