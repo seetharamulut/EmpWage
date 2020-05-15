@@ -9,7 +9,8 @@ public class Abcompany implements Iempservice{
         private int hours=0;
         private int total_hours=0;
         private int salary =0;
-
+	
+	Employee emp = new Employee();
         public void EmpStatus(Employee emp){
 
                 int status = (int)(Math.random()*10)%2;
