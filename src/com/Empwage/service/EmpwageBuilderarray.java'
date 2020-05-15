@@ -27,7 +27,8 @@ public class EmpwageBuilderarray implements Iwagecomputation{
 		for(int i=0; i<companyempwagelist.size(); i++){
 			Companyempwage companyempwage = companyempwagelist.get(i);
 			Emp_Salary(companyempwage);
-			System.out.println(companyempwage.Total_emp_salary());
+			System.out.println(Total_emp_salary);
+
 		}
 	}
 
