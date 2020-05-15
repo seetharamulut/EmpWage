@@ -23,6 +23,6 @@ public class Companyempwage{
 	}
 
 	public String Total_emp_salary(){
-		return company+ " employee total salary is"+ total_salary;
+		return company+ " employee total salary is : "+ total_salary;
 	}
 }
