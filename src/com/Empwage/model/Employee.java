@@ -5,7 +5,7 @@ public class Employee{
         private boolean status;
 	private int dailywage;
 	private int salary;
-
+	
         public boolean getStatus(){
                 return status;
         }
@@ -21,7 +21,6 @@ public class Employee{
         public void setDailywage(int wage){
                 this.dailywage=wage;
         }
-
 	public int getSalary(){
                 return salary;
         }
@@ -29,5 +28,6 @@ public class Employee{
         public void setSalary(int salary){
                 this.salary=salary;
         }
+
 
 }
