@@ -1,8 +1,9 @@
 package com.Empwage.service;
 import com.Empwage.model.Employee;
 import com.Empwage.service.Companyempwage;
+import com.Empwage.service.Iwagecomputation;
 
-public class EmpwageBuilderarray{
+public class EmpwageBuilderarray implements Iwagecomputation{
 
 
 	private int no_of_company=0;
