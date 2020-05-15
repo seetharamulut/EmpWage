@@ -53,6 +53,7 @@ public class Abcompany implements Iempservice{
                 else
                         emp.setSalary(monthly_hours * hour_wage);
 
+		total_hours=0;
 		System.out.print(name);
                 System.out.println("  employee salaryis : "+ emp.getSalary());
         }

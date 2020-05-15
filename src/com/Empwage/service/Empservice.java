@@ -8,9 +8,10 @@ public class Empservice{
         private int hours=0;
 	private int total_hours=0;
 	private int salary =0;
-        private final int hour_wage=20;
-	private final int monthly_days=20;
+	private final int hour_wage=20;
+	private final int monthly_days=21;
 	private final int monthly_hours=100;
+
 
 	public void EmpStatus(Employee emp){
 

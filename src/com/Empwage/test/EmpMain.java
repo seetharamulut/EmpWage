@@ -13,6 +13,6 @@ public class EmpMain{
 		Employee emp = new Employee();
 
 		Iempservice.EmpSalary(emp, "Reliance", 18, 14, 120);
-		
+		Iempservice.EmpSalary(emp, "Dmart", 20,20,110);
         }
 }
