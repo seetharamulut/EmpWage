@@ -18,11 +18,11 @@ public class Companyempwage{
 
 	}
 
-	public void setTotal_salary(int total_salary){
+	public void setTotalSalary(int total_salary){
 		this.total_salary = total_salary;
 	}
 
-	public String Total_emp_salary(){
+	public String totalEmpSalary(){
 		return company+ " employee total salary is : "+ total_salary;
 	}
 }
