@@ -22,12 +22,12 @@ public class EmpwageBuilderarray implements Iwagecomputation{
 		companyempwagemap.put(company,companyempwage);
 	}
 
-	public void Empwage_computation(){
+	public void computeEmpwage(){
 
 		for(int i=0; i<companyempwagelist.size(); i++){
 			Companyempwage companyempwage = companyempwagelist.get(i);
 			Emp_Salary(companyempwage);
-			System.out.println(companyempwage.Total_emp_salary());
+			System.out.println(companyempwage.totalEmpSalary());
 		}
 	}
 
@@ -53,11 +53,11 @@ public class EmpwageBuilderarray implements Iwagecomputation{
 			System.out.print("Day "+ (day+1) +" : ");
 	                	switch (status){
 
-        	                case 0: System.out.println("absent");
+        	                case 0: System.out.println(companyempwage.company +" employee absent");
                 	                emp.setStatus(false);
                         	        break;
 
-                        	case 1: System.out.println("present");
+                        	case 1: System.out.println(companyempwage.company +" employee present");
                                 	emp.setStatus(true);
 
 					hours=(int)(((Math.random()*10)%8)+1);
@@ -83,7 +83,7 @@ public class EmpwageBuilderarray implements Iwagecomputation{
                 }
 
 		total_hours = 0;
-		companyempwage.setTotal_salary(total_salary);
+		companyempwage.setTotalSalary(total_salary);
 
 	}
 }
